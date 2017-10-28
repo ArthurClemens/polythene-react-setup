@@ -6,6 +6,8 @@ import { addFastClick } from "polythene-fastclick"; // optional
 import "polythene-css/dist/polythene.css";            // Component CSS
 import "polythene-css/dist/polythene-typography.css"; // Default Material Design styles including Roboto font
 
+addFastClick()
+
 const App = () => (
   <div>
     <RaisedButton
