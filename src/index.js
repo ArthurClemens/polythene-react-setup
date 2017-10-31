@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { RaisedButton, Dialog } from "polythene-react";
+import { Dialog } from "polythene-react-dialog";
+import { RaisedButton } from "polythene-react-raised-button";
 import { addFastClick } from "polythene-fastclick"; // optional
 
 import "polythene-css/dist/polythene.css";            // Component CSS
@@ -11,7 +12,7 @@ addFastClick()
 const App = () => (
   <div>
     <RaisedButton
-      label="Show dialog"
+      label="Open dialog"
       events={{
         onClick: () => Dialog.show({
           /* note the Dialog component is below the other elements in the app */

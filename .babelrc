@@ -1,16 +1,8 @@
 {
   "presets": [
-    ["env", { "modules": false }],
-    "react"
+    ["env", { "modules": false }]
   ],
   "plugins": [
-  ],
-  "env": {
-    "test": {
-      "presets": [
-        "env"
-      ],
-      "plugins": ["transform-runtime"]
-    }
-  }
+    "transform-react-jsx",
+  ]
 }

@@ -253,6 +253,12 @@ async-each@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/async-each/-/async-each-1.0.1.tgz#19d386a1d9edc6e7c1c85d388aedbcc56d33602d"
 
+async@2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/async/-/async-2.4.1.tgz#62a56b279c98a11d0987096a01cc3eeb8eb7bbd7"
+  dependencies:
+    lodash "^4.14.0"
+
 async@^1.5.2, async@~1.5:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
@@ -1525,6 +1531,13 @@ compressible@~2.0.11:
   resolved "https://registry.yarnpkg.com/compressible/-/compressible-2.0.11.tgz#16718a75de283ed8e604041625a2064586797d8a"
   dependencies:
     mime-db ">= 1.29.0 < 2"
+
+compression-webpack-plugin@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/compression-webpack-plugin/-/compression-webpack-plugin-1.0.1.tgz#7f0a2af9f642b4f87b5989516a3b9e9b41bb4b3f"
+  dependencies:
+    async "2.4.1"
+    webpack-sources "^1.0.1"
 
 compression@^1.5.2:
   version "1.7.1"
@@ -4690,13 +4703,6 @@ polythene-core-radio-button@^1.0.0-rc.8:
     polythene-core-selection-control "^1.0.0-rc.8"
     polythene-theme "^1.0.0-rc.8"
 
-polythene-core-radio-group@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-core-radio-group/-/polythene-core-radio-group-1.0.0-rc.8.tgz#4d33036fbbf556a7b440c6822e05fece254b8f18"
-  dependencies:
-    polythene-core "^1.0.0-rc.8"
-    polythene-theme "^1.0.0-rc.8"
-
 polythene-core-raised-button@^1.0.0-rc.8:
   version "1.0.0-rc.8"
   resolved "https://registry.yarnpkg.com/polythene-core-raised-button/-/polythene-core-raised-button-1.0.0-rc.8.tgz#e70109dbe6a67d52111ab44e06ad4163511ff428"
@@ -5078,15 +5084,6 @@ polythene-fastclick@^1.0.0-rc.8:
     fastclick "^1.0.6"
     polythene-core "^1.0.0-rc.8"
 
-polythene-react-base-spinner@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-base-spinner/-/polythene-react-base-spinner-1.0.0-rc.8.tgz#9171035b35dff85b8ca91891b06879038fb0b57f"
-  dependencies:
-    polythene-core "^1.0.0-rc.8"
-    polythene-core-base-spinner "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-    polythene-react-shadow "^1.0.0-rc.8"
-
 polythene-react-base@^1.0.0-rc.8:
   version "1.0.0-rc.8"
   resolved "https://registry.yarnpkg.com/polythene-react-base/-/polythene-react-base-1.0.0-rc.8.tgz#1b8e80100b15ab66b7aef33128711541bbe2b13e"
@@ -5103,26 +5100,6 @@ polythene-react-button@^1.0.0-rc.8:
     polythene-core-button "^1.0.0-rc.8"
     polythene-react-base "^1.0.0-rc.8"
     polythene-react-ripple "^1.0.0-rc.8"
-
-polythene-react-card@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-card/-/polythene-react-card-1.0.0-rc.8.tgz#ff83520a6a9cefcdc9236fc9e82ff57af86f69b0"
-  dependencies:
-    polythene-core-card "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-    polythene-react-icon "^1.0.0-rc.8"
-    polythene-react-list-tile "^1.0.0-rc.8"
-    polythene-react-shadow "^1.0.0-rc.8"
-
-polythene-react-checkbox@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-checkbox/-/polythene-react-checkbox-1.0.0-rc.8.tgz#783e795284af15bddf87a6bc7e2ad5f46a035053"
-  dependencies:
-    polythene-core-checkbox "^1.0.0-rc.8"
-    polythene-core-selection-control "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-    polythene-react-icon "^1.0.0-rc.8"
-    polythene-react-icon-button "^1.0.0-rc.8"
 
 polythene-react-dialog-pane@^1.0.0-rc.8:
   version "1.0.0-rc.8"
@@ -5141,111 +5118,6 @@ polythene-react-dialog@^1.0.0-rc.8:
     polythene-react-dialog-pane "^1.0.0-rc.8"
     polythene-react-shadow "^1.0.0-rc.8"
 
-polythene-react-fab@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-fab/-/polythene-react-fab-1.0.0-rc.8.tgz#9735c740476d7f55cb1eda7f30e47f96d16aca3c"
-  dependencies:
-    polythene-core-fab "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-    polythene-react-icon "^1.0.0-rc.8"
-    polythene-react-raised-button "^1.0.0-rc.8"
-
-polythene-react-icon-button@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-icon-button/-/polythene-react-icon-button-1.0.0-rc.8.tgz#9a2783471dadac082f0e46c153b9d569d6228629"
-  dependencies:
-    polythene-core-icon-button "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-    polythene-react-button "^1.0.0-rc.8"
-    polythene-react-icon "^1.0.0-rc.8"
-
-polythene-react-icon@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-icon/-/polythene-react-icon-1.0.0-rc.8.tgz#51a1c598e7a77739be638f898c8adb2c578de79d"
-  dependencies:
-    polythene-core-icon "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-    polythene-react-svg "^1.0.0-rc.8"
-
-polythene-react-ios-spinner@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-ios-spinner/-/polythene-react-ios-spinner-1.0.0-rc.8.tgz#96288f1dd806fb7b15426dd062239a7b20b049ec"
-  dependencies:
-    polythene-core "^1.0.0-rc.8"
-    polythene-core-ios-spinner "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-    polythene-react-base-spinner "^1.0.0-rc.8"
-
-polythene-react-list-tile@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-list-tile/-/polythene-react-list-tile-1.0.0-rc.8.tgz#a541e46d9c16a5dbb954a3fa208a0bee96f1af97"
-  dependencies:
-    polythene-core-list-tile "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-    polythene-react-icon "^1.0.0-rc.8"
-    polythene-react-ripple "^1.0.0-rc.8"
-
-polythene-react-list@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-list/-/polythene-react-list-1.0.0-rc.8.tgz#38141bc639b79aea702e8b225bc2ac9c3781e207"
-  dependencies:
-    polythene-core-list "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-    polythene-react-list-tile "^1.0.0-rc.8"
-
-polythene-react-material-design-progress-spinner@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-material-design-progress-spinner/-/polythene-react-material-design-progress-spinner-1.0.0-rc.8.tgz#bfe484b34ff1fdaf5c85fd311b98e5418eda44ed"
-  dependencies:
-    polythene-core "^1.0.0-rc.8"
-    polythene-core-material-design-progress-spinner "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-    polythene-react-base-spinner "^1.0.0-rc.8"
-
-polythene-react-material-design-spinner@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-material-design-spinner/-/polythene-react-material-design-spinner-1.0.0-rc.8.tgz#d36fc611e2d5d7d97cc3ee22a1b3e43688e779e7"
-  dependencies:
-    polythene-core "^1.0.0-rc.8"
-    polythene-core-material-design-spinner "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-    polythene-react-base-spinner "^1.0.0-rc.8"
-
-polythene-react-menu@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-menu/-/polythene-react-menu-1.0.0-rc.8.tgz#2375f35fd5e648faf4d6cde2ae121154d24aa02d"
-  dependencies:
-    polythene-core "^1.0.0-rc.8"
-    polythene-core-menu "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-    polythene-react-shadow "^1.0.0-rc.8"
-
-polythene-react-notification@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-notification/-/polythene-react-notification-1.0.0-rc.8.tgz#bbedd24aede435bc5904e9d86a9f07441c4e940e"
-  dependencies:
-    polythene-core "^1.0.0-rc.8"
-    polythene-core-notification "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-
-polythene-react-radio-button@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-radio-button/-/polythene-react-radio-button-1.0.0-rc.8.tgz#628a981d7c0073f8d552fca3ca0995c19cab2bdf"
-  dependencies:
-    polythene-core-radio-button "^1.0.0-rc.8"
-    polythene-core-selection-control "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-    polythene-react-icon "^1.0.0-rc.8"
-    polythene-react-icon-button "^1.0.0-rc.8"
-
-polythene-react-radio-group@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-radio-group/-/polythene-react-radio-group-1.0.0-rc.8.tgz#c28325a3c733aae7b19e78babdb317b91f3ecc70"
-  dependencies:
-    polythene-core-radio-group "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-    polythene-react-radio-button "^1.0.0-rc.8"
-
 polythene-react-raised-button@^1.0.0-rc.8:
   version "1.0.0-rc.8"
   resolved "https://registry.yarnpkg.com/polythene-react-raised-button/-/polythene-react-raised-button-1.0.0-rc.8.tgz#832088371cad11893b8da81afc62c5ea36125651"
@@ -5262,111 +5134,12 @@ polythene-react-ripple@^1.0.0-rc.8:
     polythene-core-ripple "^1.0.0-rc.8"
     polythene-react-base "^1.0.0-rc.8"
 
-polythene-react-search@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-search/-/polythene-react-search-1.0.0-rc.8.tgz#c75d2339815e7dac02fe6dcc844b69e30c617eed"
-  dependencies:
-    polythene-core-search "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-    polythene-react-textfield "^1.0.0-rc.8"
-
 polythene-react-shadow@^1.0.0-rc.8:
   version "1.0.0-rc.8"
   resolved "https://registry.yarnpkg.com/polythene-react-shadow/-/polythene-react-shadow-1.0.0-rc.8.tgz#1187b438551a4f6ef10eb70c36f7ba47f8b8d97b"
   dependencies:
     polythene-core-shadow "^1.0.0-rc.8"
     polythene-react-base "^1.0.0-rc.8"
-
-polythene-react-slider@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-slider/-/polythene-react-slider-1.0.0-rc.8.tgz#66342303d13ebfa1216f9f1b5fb235b661f4f22f"
-  dependencies:
-    polythene-core-slider "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-
-polythene-react-snackbar@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-snackbar/-/polythene-react-snackbar-1.0.0-rc.8.tgz#3a5a05bbba95234389af32936d5c5bbc681a3dff"
-  dependencies:
-    polythene-core "^1.0.0-rc.8"
-    polythene-core-snackbar "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-
-polythene-react-svg@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-svg/-/polythene-react-svg-1.0.0-rc.8.tgz#46662c3b724eb19b93571210ff3c4211cb89d882"
-  dependencies:
-    polythene-core-svg "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-
-polythene-react-switch@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-switch/-/polythene-react-switch-1.0.0-rc.8.tgz#9de658558b0cfda764fb88a61ec46a067814b4ea"
-  dependencies:
-    polythene-core-selection-control "^1.0.0-rc.8"
-    polythene-core-switch "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-    polythene-react-icon-button "^1.0.0-rc.8"
-    polythene-react-shadow "^1.0.0-rc.8"
-
-polythene-react-tabs@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-tabs/-/polythene-react-tabs-1.0.0-rc.8.tgz#437db399ee11832f3bcb5c825518e5bfadf8bd55"
-  dependencies:
-    polythene-core-tabs "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-    polythene-react-button "^1.0.0-rc.8"
-    polythene-react-icon "^1.0.0-rc.8"
-    polythene-react-icon-button "^1.0.0-rc.8"
-
-polythene-react-textfield@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-textfield/-/polythene-react-textfield-1.0.0-rc.8.tgz#a0d8dc091cf0287e0f2c1b1042c29933df9d3068"
-  dependencies:
-    polythene-core-textfield "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-
-polythene-react-toolbar@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react-toolbar/-/polythene-react-toolbar-1.0.0-rc.8.tgz#29bf0517bf96ed9d9a39edc66a55cdf8c116feed"
-  dependencies:
-    polythene-core-toolbar "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-
-polythene-react@^1.0.0-rc.8:
-  version "1.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/polythene-react/-/polythene-react-1.0.0-rc.8.tgz#2bd845ebb4f252b82c285e9ca87e0ef98366f697"
-  dependencies:
-    polythene-css "^1.0.0-rc.8"
-    polythene-react-base "^1.0.0-rc.8"
-    polythene-react-button "^1.0.0-rc.8"
-    polythene-react-card "^1.0.0-rc.8"
-    polythene-react-checkbox "^1.0.0-rc.8"
-    polythene-react-dialog "^1.0.0-rc.8"
-    polythene-react-dialog-pane "^1.0.0-rc.8"
-    polythene-react-fab "^1.0.0-rc.8"
-    polythene-react-icon "^1.0.0-rc.8"
-    polythene-react-icon-button "^1.0.0-rc.8"
-    polythene-react-ios-spinner "^1.0.0-rc.8"
-    polythene-react-list "^1.0.0-rc.8"
-    polythene-react-list-tile "^1.0.0-rc.8"
-    polythene-react-material-design-progress-spinner "^1.0.0-rc.8"
-    polythene-react-material-design-spinner "^1.0.0-rc.8"
-    polythene-react-menu "^1.0.0-rc.8"
-    polythene-react-notification "^1.0.0-rc.8"
-    polythene-react-radio-button "^1.0.0-rc.8"
-    polythene-react-radio-group "^1.0.0-rc.8"
-    polythene-react-raised-button "^1.0.0-rc.8"
-    polythene-react-ripple "^1.0.0-rc.8"
-    polythene-react-search "^1.0.0-rc.8"
-    polythene-react-shadow "^1.0.0-rc.8"
-    polythene-react-slider "^1.0.0-rc.8"
-    polythene-react-snackbar "^1.0.0-rc.8"
-    polythene-react-svg "^1.0.0-rc.8"
-    polythene-react-switch "^1.0.0-rc.8"
-    polythene-react-tabs "^1.0.0-rc.8"
-    polythene-react-textfield "^1.0.0-rc.8"
-    polythene-react-toolbar "^1.0.0-rc.8"
 
 polythene-style@^1.0.0-rc.8:
   version "1.0.0-rc.8"
