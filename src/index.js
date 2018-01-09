@@ -2,12 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Dialog } from "polythene-react-dialog";
 import { RaisedButton } from "polythene-react-raised-button";
-import { addFastClick } from "polythene-fastclick"; // optional
 
 import "polythene-css/dist/polythene.css";            // Component CSS
 import "polythene-css/dist/polythene-typography.css"; // Default Material Design styles including Roboto font
-
-addFastClick()
 
 const App = () => (
   <div>
