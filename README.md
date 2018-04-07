@@ -1,4 +1,4 @@
-# Setup of Polythene 1.0 for React
+# Polythene for React setup example
 
 Compatible with React 16.x
 
