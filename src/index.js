@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Dialog } from "polythene-react-dialog";
-import { RaisedButton } from "polythene-react-raised-button";
+import { Dialog, RaisedButton } from "polythene-react";
 
 import "polythene-css/dist/polythene.css";            // Component CSS
 import "polythene-css/dist/polythene-typography.css"; // Default Material Design styles including Roboto font
