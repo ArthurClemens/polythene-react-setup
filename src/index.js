@@ -1,13 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Dialog, RaisedButton } from "polythene-react";
+import { Dialog, Button } from "polythene-react";
 
 import "polythene-css/dist/polythene.css";            // Component CSS
 import "polythene-css/dist/polythene-typography.css"; // Default Material Design styles including Roboto font
 
 const App = () => (
   <div>
-    <RaisedButton
+    <Button
+      raised
       label="Open dialog"
       events={{
         onClick: () => Dialog.show({
