@@ -1,6 +1,6 @@
 # Polythene for React setup example
 
-Compatible with React 16.x
+Compatible with React 16.x, Webpack 4 and Babel 7.
 
 Minimal setup example how to create a [Polythene](https://github.com/ArthurClemens/polythene) app for React.
 

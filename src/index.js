@@ -6,7 +6,7 @@ import "polythene-css/dist/polythene.css";            // Component CSS
 import "polythene-css/dist/polythene-typography.css"; // Default Material Design styles including Roboto font
 
 const App = () => (
-  <div>
+  <React.Fragment>
     <Button
       raised
       label="Open dialog"
@@ -20,7 +20,7 @@ const App = () => (
       }}
     />
     <Dialog />
-  </div>
+  </React.Fragment>
 );
 
 const mountNode = document.querySelector("#app");
