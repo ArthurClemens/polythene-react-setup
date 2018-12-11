@@ -1,6 +1,6 @@
 /* global __dirname */
 const path = require("path");
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
 
@@ -16,11 +16,12 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['*', '.mjs', '.js', '.jsx']
+    extensions: ["*", ".mjs", ".js", ".jsx"]
   },
 
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: [{
@@ -32,11 +33,11 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               modules: true,
               sourceMap: true,
-              localIdentName: '[local]'
+              localIdentName: "[local]"
             }
           },
         ]
