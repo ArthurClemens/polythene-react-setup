@@ -1,17 +1,19 @@
-/* global __dirname */
+/* global process */
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+const baseDir = process.cwd();
+
 module.exports = {
 
-  context: path.resolve(__dirname, "../src"),
+  context: path.resolve(baseDir, "./src"),
 
   entry: {
     index: "../index.js",
   },
 
   output: {
-    path: path.resolve(__dirname, "../dist"),
+    path: path.resolve(baseDir, "./dist"),
     filename: "js/[name].js"
   },
 
@@ -22,7 +24,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.m?js$/,
         exclude: /node_modules/,
         use: [{
           loader: "babel-loader"
