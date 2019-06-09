@@ -1,6 +1,7 @@
 /* global process */
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const WebpackModules = require("webpack-modules");
 
 const baseDir = process.cwd();
 
@@ -26,8 +27,12 @@ module.exports = {
       {
         test: /\.m?js$/,
         exclude: /node_modules/,
+        type: "javascript/auto",
         use: [{
-          loader: "babel-loader"
+          loader: "babel-loader",
+          options: {
+            configFile: "./babel.config.js"
+          }
         }]
       },
       {
@@ -48,6 +53,7 @@ module.exports = {
   },
 
   plugins: [
+    new WebpackModules(),
     new MiniCssExtractPlugin({
       filename: "css/app.css"
     }),
