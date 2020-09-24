@@ -41,7 +41,6 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              modules: true,
               sourceMap: true,
               localIdentName: "[local]"
             }
